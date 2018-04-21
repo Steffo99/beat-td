@@ -11,7 +11,8 @@ public class InstantiateOnClick : MonoBehaviour
         {
             if (original != null)
             {
-                Instantiate(original, transform.position, transform.rotation);
+                Vector3 position = new Vector3(transform.position.x, transform.position.y, 0);
+                Instantiate(original, position, transform.rotation);
             }
         }
 	}

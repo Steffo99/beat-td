@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 505484107}
   - component: {fileID: 505484109}
   - component: {fileID: 505484110}
+  - component: {fileID: 505484111}
   m_Layer: 0
   m_Name: Cursor
   m_TagString: Untagged
@@ -212,6 +213,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a21dfc8c9bdaec4c962368a99c026a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &505484111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 505484106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 081ef29388dfb6347a06f44d55a176d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  original: {fileID: 1775685083512922, guid: 1753708d09b3fb1458f2fc84f14004cd, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
