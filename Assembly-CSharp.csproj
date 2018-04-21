@@ -60,9 +60,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AlignToGridContinuous.cs" />
+    <Compile Include="Assets\Scripts\HatTower.cs" />
     <Compile Include="Assets\Scripts\InstantiateOnClick.cs" />
+    <Compile Include="Assets\Scripts\KickTower.cs" />
     <Compile Include="Assets\Scripts\PositionFromMouse.cs" />
+    <Compile Include="Assets\Scripts\SnareTower.cs" />
+    <Compile Include="Assets\Scripts\SongData.cs" />
     <Compile Include="Assets\Scripts\TowerPlacer.cs" />
+    <None Include="Assets\Sounds\credit.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/stepi/Code/ld41/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
