@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class HatTower : MonoBehaviour {
 
+    public Sprite standardSprite;
+    public Sprite alternateSprite;
+
     private AudioSource hatSource;
     private SongData songData;
     private SpriteRenderer spriteRenderer;
@@ -38,13 +41,21 @@ public class HatTower : MonoBehaviour {
                 Debug.Log(power.ToString("0.00"));
                 //Start the cooldown
                 cooldownRemaining = cooldown;
+                //Change the sprite
+                spriteRenderer.sprite = alternateSprite;
+                Invoke("OnEndAnimation", Time.fixedDeltaTime * 6);
             }
         }
 	}
 
+    void OnEndAnimation()
+    {
+        spriteRenderer.sprite = standardSprite;
+    }
+
     void OnBeat()
     {
-        spriteRenderer.color = Color.black;
+        spriteRenderer.color = Color.yellow;
         Invoke("ResetColor", Time.fixedDeltaTime * 2);
     }
 

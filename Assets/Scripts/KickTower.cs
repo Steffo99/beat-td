@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class KickTower : MonoBehaviour {
 
+    public Sprite standardSprite;
+    public Sprite alternateSprite;
+
     private AudioSource kickSource;
     private SongData songData;
     private SpriteRenderer spriteRenderer;
@@ -38,13 +41,21 @@ public class KickTower : MonoBehaviour {
                 Debug.Log(power.ToString("0.00"));
                 //Start the cooldown
                 cooldownRemaining = cooldown;
+                //Change the sprite
+                spriteRenderer.sprite = alternateSprite;
+                Invoke("OnEndAnimation", Time.fixedDeltaTime * 20);
             }
         }
 	}
 
+    void OnEndAnimation()
+    {
+        spriteRenderer.sprite = standardSprite;
+    }
+
     void OnBeat()
     {
-        spriteRenderer.color = Color.black;
+        spriteRenderer.color = Color.yellow;
         Invoke("ResetColor", Time.fixedDeltaTime * 2);
     }
 

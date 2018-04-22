@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AlignToGridContinuous.cs" />
+    <Compile Include="Assets\Scripts\DepthFromY.cs" />
     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\EnemyStatus.cs" />
     <Compile Include="Assets\Scripts\GameStatus.cs" />

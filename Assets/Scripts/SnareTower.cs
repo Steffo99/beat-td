@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class SnareTower : MonoBehaviour {
 
+    public Sprite standardSprite;
+    public Sprite alternateSprite;
+
     private AudioSource snareSource;
     private SongData songData;
     private SpriteRenderer spriteRenderer;
@@ -18,7 +21,7 @@ public class SnareTower : MonoBehaviour {
         //The period is 120 / bpm
         cooldown = 44 / songData.bpm;
         //Find next beat
-        float nextBeatIn = 120 / songData.bpm - (songData.songTime - (Mathf.Floor((songData.songTime + 60 / songData.bpm) / 120 * songData.bpm) * 120 / songData.bpm));
+        float nextBeatIn = 180 / songData.bpm - (songData.songTime - (Mathf.Floor(songData.songTime / 120 * songData.bpm) * 120 / songData.bpm));
         InvokeRepeating("OnBeat", nextBeatIn, 120 / songData.bpm);
     }
 
@@ -38,13 +41,21 @@ public class SnareTower : MonoBehaviour {
                 Debug.Log(power.ToString("0.00"));
                 //Start the cooldown
                 cooldownRemaining = cooldown;
+                //Change the sprite
+                spriteRenderer.sprite = alternateSprite;
+                Invoke("OnEndAnimation", Time.fixedDeltaTime * 10);
             }
         }
 	}
 
+    void OnEndAnimation()
+    {
+        spriteRenderer.sprite = standardSprite;
+    }
+
     void OnBeat()
     {
-        spriteRenderer.color = Color.black;
+        spriteRenderer.color = Color.yellow;
         Invoke("ResetColor", Time.fixedDeltaTime * 2);
     }
 
