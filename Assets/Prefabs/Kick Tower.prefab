@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 61588744058150434}
   - component: {fileID: 114295014103482780}
   - component: {fileID: 82939556679490172}
+  - component: {fileID: 114175265770913682}
   m_Layer: 0
   m_Name: Kick Tower
   m_TagString: Untagged
@@ -59,8 +60,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 1.0416666, y: 1.1083333}
+    newSize: {x: 0.98333335, y: 1.05}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -163,6 +164,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &114175265770913682
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1116464442260662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6128520e3bbd52845adc012369e21f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114295014103482780
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -174,6 +186,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a37ebf9d8c1c354981a443ff34a5b04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  standardSprite: {fileID: 21300000, guid: 5268fd080cf70a8439aa9be1c9c73596, type: 3}
+  alternateSprite: {fileID: 21300000, guid: 619f9b119745a7c4dac29348c3464a39, type: 3}
 --- !u!212 &212110504005834194
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -209,12 +223,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dafe624326fac4b40910fb5570f2b15e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5268fd080cf70a8439aa9be1c9c73596, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.98333335, y: 1.05}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
