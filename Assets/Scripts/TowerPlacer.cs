@@ -6,10 +6,20 @@ public class TowerPlacer : MonoBehaviour
 {
     public GameObject selected = null;
     SpriteRenderer cursorSprite;
+    SpriteRenderer towerGhost;
 
     void Start()
     {
-        cursorSprite = gameObject.GetComponent<SpriteRenderer>();
+        SpriteRenderer[] spriteRenderers = gameObject.GetComponentsInChildren<SpriteRenderer>();
+        foreach (SpriteRenderer spriteRenderer in spriteRenderers)
+        {
+            if (spriteRenderer.gameObject == gameObject)
+            {
+                cursorSprite = spriteRenderer;
+                continue;
+            }
+            towerGhost = spriteRenderer;
+        }
     }
 
     void Update () {
@@ -18,10 +28,12 @@ public class TowerPlacer : MonoBehaviour
         if (collider == null)
         {
             cursorSprite.color = Color.white;
+            towerGhost.color = Color.white;
         }
         else
         {
             cursorSprite.color = Color.red;
+            towerGhost.color = new Color(1, 1, 1, 0);
         }
         if (Input.GetMouseButtonDown(0))
         {

@@ -6,6 +6,7 @@ public class SnareTower : MonoBehaviour {
 
     private AudioSource snareSource;
     private SongData songData;
+    private SpriteRenderer spriteRenderer;
     private float cooldown;
     private float cooldownRemaining = 0;
 
@@ -13,8 +14,12 @@ public class SnareTower : MonoBehaviour {
     {
         snareSource = gameObject.GetComponent<AudioSource>();
         songData = GameObject.FindGameObjectWithTag("GameController").GetComponent<SongData>();
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         //The period is 120 / bpm
         cooldown = 44 / songData.bpm;
+        //Find next beat
+        float nextBeatIn = 120 / songData.bpm - (songData.songTime - (Mathf.Floor((songData.songTime + 60 / songData.bpm) / 120 * songData.bpm) * 120 / songData.bpm));
+        InvokeRepeating("OnBeat", nextBeatIn, 120 / songData.bpm);
     }
 
     void Update () {
@@ -36,4 +41,15 @@ public class SnareTower : MonoBehaviour {
             }
         }
 	}
+
+    void OnBeat()
+    {
+        spriteRenderer.color = Color.black;
+        Invoke("ResetColor", Time.fixedDeltaTime * 2);
+    }
+
+    void ResetColor()
+    {
+        spriteRenderer.color = Color.white;
+    }
 }

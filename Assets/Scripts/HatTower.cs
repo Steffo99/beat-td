@@ -6,6 +6,7 @@ public class HatTower : MonoBehaviour {
 
     private AudioSource hatSource;
     private SongData songData;
+    private SpriteRenderer spriteRenderer;
     private float cooldown;
     private float cooldownRemaining = 0;
 
@@ -13,8 +14,12 @@ public class HatTower : MonoBehaviour {
     {
         hatSource = gameObject.GetComponent<AudioSource>();
         songData = GameObject.FindGameObjectWithTag("GameController").GetComponent<SongData>();
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         //The period is 30 / bpm
         cooldown = 11 / songData.bpm;
+        //Find next beat
+        float nextBeatIn = 30 / songData.bpm - (songData.songTime - (Mathf.Floor(songData.songTime / 30 * songData.bpm) * 30 / songData.bpm));
+        InvokeRepeating("OnBeat", nextBeatIn, 30 / songData.bpm);
     }
 
     void Update () {
@@ -36,4 +41,15 @@ public class HatTower : MonoBehaviour {
             }
         }
 	}
+
+    void OnBeat()
+    {
+        spriteRenderer.color = Color.black;
+        Invoke("ResetColor", Time.fixedDeltaTime * 2);
+    }
+
+    void ResetColor()
+    {
+        spriteRenderer.color = Color.white;
+    }
 }
