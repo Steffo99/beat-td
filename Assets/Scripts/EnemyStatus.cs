@@ -17,7 +17,6 @@ public class EnemyStatus : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("HIT");
         KickCollision kickCollision = collision.GetComponent("KickCollision") as KickCollision;
         if (kickCollision != null)
         {
