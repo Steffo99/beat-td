@@ -6,6 +6,7 @@ public class KickTower : MonoBehaviour {
 
     public Sprite standardSprite;
     public Sprite alternateSprite;
+    public GameObject collisionObject;
 
     private AudioSource kickSource;
     private SongData songData;
@@ -30,19 +31,23 @@ public class KickTower : MonoBehaviour {
         if (cooldownRemaining <= 0)
         {
             cooldownRemaining = 0;
-            if (Input.GetKeyDown(KeyCode.X))
-            {
-                //Calculate the power of the 
-                //power = Sqrt(Cos(pi * t))
-                float power = Mathf.Pow(Mathf.Abs(Mathf.Cos(songData.songTime * Mathf.PI * songData.bpm / 120)), 2);
-                //Play the sound
-                kickSource.Play();
-                //Start the cooldown
-                cooldownRemaining = cooldown;
-                //Change the sprite
-                spriteRenderer.sprite = alternateSprite;
-                Invoke("OnEndAnimation", Time.fixedDeltaTime * 20);
-            }
+        }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            //Calculate the power of the 
+            //power = Sqrt(Cos(pi * t))
+            float power = Mathf.Pow(Mathf.Abs(Mathf.Cos(songData.songTime * Mathf.PI * songData.bpm / 120)) * ((cooldown - cooldownRemaining) / cooldown), 2);
+            //Create the hitbox based on the power
+            GameObject hit = Instantiate(collisionObject, transform.position, transform.rotation);
+            hit.transform.localScale = new Vector3(power * 1.5f, power * 1.5f, 1);
+            //Play the sound
+            kickSource.volume = power;
+            kickSource.Play();
+            //Start the cooldown
+            cooldownRemaining = cooldown;
+            //Change the sprite
+            spriteRenderer.sprite = alternateSprite;
+            Invoke("OnEndAnimation", Time.fixedDeltaTime * 20);
         }
 	}
 

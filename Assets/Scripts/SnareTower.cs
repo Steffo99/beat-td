@@ -30,19 +30,19 @@ public class SnareTower : MonoBehaviour {
         if (cooldownRemaining <= 0)
         {
             cooldownRemaining = 0;
-            if (Input.GetKeyDown(KeyCode.C))
-            {
-                //Calculate the power of the 
-                //power = Sqrt(Cos(pi * t))
-                float power = Mathf.Pow(Mathf.Abs(Mathf.Sin(songData.songTime * Mathf.PI * songData.bpm / 120)), 2);
-                //Play the sound
-                snareSource.Play();
-                //Start the cooldown
-                cooldownRemaining = cooldown;
-                //Change the sprite
-                spriteRenderer.sprite = alternateSprite;
-                Invoke("OnEndAnimation", Time.fixedDeltaTime * 10);
-            }
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            //Calculate the power
+            float power = Mathf.Pow(Mathf.Abs(Mathf.Sin(songData.songTime * Mathf.PI * songData.bpm / 120)) * ((cooldown - cooldownRemaining) / cooldown), 2);
+            //Play the sound
+            snareSource.volume = power;
+            snareSource.Play();
+            //Start the cooldown
+            cooldownRemaining = cooldown;
+            //Change the sprite
+            spriteRenderer.sprite = alternateSprite;
+            Invoke("OnEndAnimation", Time.fixedDeltaTime * 10);
         }
 	}
 

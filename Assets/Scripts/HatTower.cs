@@ -30,19 +30,20 @@ public class HatTower : MonoBehaviour {
         if (cooldownRemaining <= 0)
         {
             cooldownRemaining = 0;
-            if (Input.GetKeyDown(KeyCode.Z))
-            {
-                //Calculate the power of the 
-                //power = Sqrt(Cos(pi * t))
-                float power = Mathf.Pow(Mathf.Abs(Mathf.Cos(songData.songTime * Mathf.PI * songData.bpm / 30)), 2);
-                //Play the sound
-                hatSource.Play();
-                //Start the cooldown
-                cooldownRemaining = cooldown;
-                //Change the sprite
-                spriteRenderer.sprite = alternateSprite;
-                Invoke("OnEndAnimation", Time.fixedDeltaTime * 6);
-            }
+        }
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            //Calculate the power of the 
+            //power = Sqrt(Cos(pi * t))
+            float power = Mathf.Pow(Mathf.Abs(Mathf.Cos(songData.songTime * Mathf.PI * songData.bpm / 30)) * ((cooldown - cooldownRemaining) / cooldown), 2);
+            //Play the sound
+            hatSource.volume = power;
+            hatSource.Play();
+            //Start the cooldown
+            cooldownRemaining = cooldown;
+            //Change the sprite
+            spriteRenderer.sprite = alternateSprite;
+            Invoke("OnEndAnimation", Time.fixedDeltaTime * 6);
         }
 	}
 

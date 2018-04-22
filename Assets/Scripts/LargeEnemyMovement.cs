@@ -29,7 +29,7 @@ public class LargeEnemyMovement : MonoBehaviour {
         {
             spriteRenderer.sprite = upSprite;
         }
-        else if (difference.y < -0)
+        else if (difference.y < 0)
         {
             spriteRenderer.sprite = downSprite;
         }

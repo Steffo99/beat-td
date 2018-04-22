@@ -25,7 +25,7 @@ public class TowerPlacer : MonoBehaviour
     void Update () {
         //Check if there's nothing else under the cursor
         Collider2D collider = Physics2D.OverlapPoint(transform.position);
-        if (collider == null)
+        if (collider == null || collider.tag != "Tower")
         {
             cursorSprite.color = Color.white;
             towerGhost.color = Color.white;
@@ -40,7 +40,7 @@ public class TowerPlacer : MonoBehaviour
             //Check if something is selected
             if (selected == null) return;
             //Ensure there is nothing below
-            if (collider != null) return;
+            if (collider != null && collider.tag == "Tower") return;
             //Place the item
             Vector3 position = new Vector3(transform.position.x, transform.position.y, 0);
             Instantiate(selected, position, transform.rotation);

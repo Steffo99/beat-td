@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Tower
+  - Hit
   layers:
   - Default
   - TransparentFX
@@ -43,4 +46,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Hit
+    uniqueID: 2556322779
     locked: 0

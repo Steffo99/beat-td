@@ -63,10 +63,12 @@
     <Compile Include="Assets\Scripts\DepthFromY.cs" />
     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\EnemyStatus.cs" />
+    <Compile Include="Assets\Scripts\ExpandUntil.cs" />
     <Compile Include="Assets\Scripts\GameStatus.cs" />
     <Compile Include="Assets\Scripts\HatTower.cs" />
     <Compile Include="Assets\Scripts\InstantiateEverySeconds.cs" />
     <Compile Include="Assets\Scripts\InstantiateOnClick.cs" />
+    <Compile Include="Assets\Scripts\KickCollision.cs" />
     <Compile Include="Assets\Scripts\KickTower.cs" />
     <Compile Include="Assets\Scripts\LargeEnemyMovement.cs" />
     <Compile Include="Assets\Scripts\PositionFromMouse.cs" />

@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114175265770913682}
   m_Layer: 0
   m_Name: Kick Tower
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,6 +188,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   standardSprite: {fileID: 21300000, guid: 5268fd080cf70a8439aa9be1c9c73596, type: 3}
   alternateSprite: {fileID: 21300000, guid: 619f9b119745a7c4dac29348c3464a39, type: 3}
+  collisionObject: {fileID: 1274859996870096, guid: 30ce12094e6a8534b86346bec0ef74bd,
+    type: 2}
 --- !u!212 &212110504005834194
 SpriteRenderer:
   m_ObjectHideFlags: 1
