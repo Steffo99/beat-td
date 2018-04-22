@@ -37,8 +37,6 @@ public class HatTower : MonoBehaviour {
                 float power = Mathf.Pow(Mathf.Abs(Mathf.Cos(songData.songTime * Mathf.PI * songData.bpm / 30)), 2);
                 //Play the sound
                 hatSource.Play();
-                //Log the power to console
-                Debug.Log(power.ToString("0.00"));
                 //Start the cooldown
                 cooldownRemaining = cooldown;
                 //Change the sprite

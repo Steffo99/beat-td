@@ -13,7 +13,7 @@ public class InstantiateEverySeconds : MonoBehaviour {
         cooldown -= Time.deltaTime;
         if (cooldown <= 0)
         {
-            Instantiate(target);
+            Instantiate(target, transform.position, transform.rotation);
             cooldown = period;
         }
 	}

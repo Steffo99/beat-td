@@ -27,7 +27,6 @@ public class GameStatus : MonoBehaviour {
 
     public void EnemyFinishedPath(GameObject enemy)
     {
-        Debug.Log("Enemy reached target.");
         lives -= enemy.GetComponent<EnemyStatus>().livesCost;
         Destroy(enemy);
     }

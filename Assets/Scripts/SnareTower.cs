@@ -37,8 +37,6 @@ public class SnareTower : MonoBehaviour {
                 float power = Mathf.Pow(Mathf.Abs(Mathf.Sin(songData.songTime * Mathf.PI * songData.bpm / 120)), 2);
                 //Play the sound
                 snareSource.Play();
-                //Log the power to console
-                Debug.Log(power.ToString("0.00"));
                 //Start the cooldown
                 cooldownRemaining = cooldown;
                 //Change the sprite

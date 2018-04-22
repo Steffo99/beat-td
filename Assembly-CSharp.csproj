@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\InstantiateEverySeconds.cs" />
     <Compile Include="Assets\Scripts\InstantiateOnClick.cs" />
     <Compile Include="Assets\Scripts\KickTower.cs" />
+    <Compile Include="Assets\Scripts\LargeEnemyMovement.cs" />
     <Compile Include="Assets\Scripts\PositionFromMouse.cs" />
     <Compile Include="Assets\Scripts\SnareTower.cs" />
     <Compile Include="Assets\Scripts\SongData.cs" />
