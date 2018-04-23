@@ -180,7 +180,7 @@ MonoBehaviour:
   projectileObject: {fileID: 1527219696020318, guid: 8b427938956f96c4c9facb6397680650,
     type: 2}
   maxRange: 5
-  maxDamage: 30
+  maxDamage: 33
 --- !u!114 &114865138164003484
 MonoBehaviour:
   m_ObjectHideFlags: 1
