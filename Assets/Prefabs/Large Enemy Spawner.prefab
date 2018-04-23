@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4107453902716502}
-  - component: {fileID: 114754729700265596}
+  - component: {fileID: 114448414989754282}
   m_Layer: 0
   m_Name: Large Enemy Spawner
   m_TagString: Untagged
@@ -40,7 +40,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114754729700265596
+--- !u!114 &114448414989754282
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,8 +48,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1980775966905582}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49c40f26c309ea34883e6f12fd857dc0, type: 3}
+  m_Script: {fileID: 11500000, guid: ea0c3ca515aaf314789020c0202ddbbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1740071194384892, guid: 20391aaa607560a41922769d7ad4ccd4, type: 2}
-  period: 5
+  beats: 32

@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4558285466685174}
-  - component: {fileID: 114593873809628794}
+  - component: {fileID: 114595367454361148}
   m_Layer: 0
   m_Name: Enemy Spawner
   m_TagString: Untagged
@@ -40,7 +40,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114593873809628794
+--- !u!114 &114595367454361148
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,8 +48,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1395176934816150}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49c40f26c309ea34883e6f12fd857dc0, type: 3}
+  m_Script: {fileID: 11500000, guid: ea0c3ca515aaf314789020c0202ddbbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1747561760822266, guid: 6b8295ea9ddce6f49a598b9d52ee00df, type: 2}
-  period: 1
+  beats: 2

@@ -10,19 +10,15 @@ public class GameStatus : MonoBehaviour {
 
     public GameObject moneyTextObject;
     private Text moneyText;
-    public GameObject livesTextObject;
-    private Text livesText;
 
     void Start()
     {
         moneyText = moneyTextObject.GetComponent<Text>();
-        livesText = livesTextObject.GetComponent<Text>();
     }
 
     void Update()
     {
         moneyText.text = money.ToString();
-        livesText.text = lives.ToString();
     }
 
     public void EnemyFinishedPath(GameObject enemy)
