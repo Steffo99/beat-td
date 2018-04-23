@@ -7,6 +7,7 @@ public class SnareCollision : MonoBehaviour {
     public int damage;
     public float maxRange;
     public float speed;
+    public Vector3 direction = Vector3.down;
     private float distance = 0;
 
     private void Update()
@@ -16,7 +17,7 @@ public class SnareCollision : MonoBehaviour {
             Destroy(gameObject);
         }
         distance += speed * Time.deltaTime;
-        transform.Translate(Vector3.down * speed * Time.deltaTime);
+        transform.Translate(direction * speed * Time.deltaTime);
     }
     
 

@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AlignToGridContinuous.cs" />
+    <Compile Include="Assets\Scripts\BossEnemyMovement.cs" />
     <Compile Include="Assets\Scripts\ChangeSpriteOnHover.cs" />
     <Compile Include="Assets\Scripts\DepthFromY.cs" />
     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Assets\Scripts\SnareTower.cs" />
     <Compile Include="Assets\Scripts\SongData.cs" />
     <Compile Include="Assets\Scripts\SpriteOnLives.cs" />
+    <Compile Include="Assets\Scripts\TextFromCost.cs" />
     <Compile Include="Assets\Scripts\TowerPlacer.cs" />
     <Compile Include="Assets\Scripts\TowerSelector.cs" />
     <None Include="Assets\Sounds\credit.txt" />

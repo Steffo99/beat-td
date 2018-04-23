@@ -142,8 +142,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   livesCost: 2
-  health: 100
   masks: 1
+  baseHealth: 100
+  healthPerSecond: 1
 --- !u!212 &212389100043825374
 SpriteRenderer:
   m_ObjectHideFlags: 1

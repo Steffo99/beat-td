@@ -10,6 +10,7 @@ public class TowerPlacer : MonoBehaviour
     TowerSelector towerSelector;
     SpriteRenderer cursorSprite;
     SpriteRenderer towerGhost;
+    SpriteRenderer costCounter;
 
     void Start()
     {
@@ -23,7 +24,14 @@ public class TowerPlacer : MonoBehaviour
                 cursorSprite = spriteRenderer;
                 continue;
             }
-            towerGhost = spriteRenderer;
+            if (spriteRenderer.gameObject.name == "Tower Ghost")
+            {
+                towerGhost = spriteRenderer;
+            }
+            if (spriteRenderer.gameObject.name == "Cost Counter")
+            {
+                costCounter = spriteRenderer;
+            }
         }
     }
 
@@ -34,20 +42,21 @@ public class TowerPlacer : MonoBehaviour
         Collider2D collider = Physics2D.OverlapPoint(transform.position);
         if (collider == null || collider.tag == "Hit")
         {
-            if (hasEnoughMoney)
-            {
-                cursorSprite.color = Color.white;
-            }
-            else
-            {
-                cursorSprite.color = Color.yellow;
-            }
+            cursorSprite.color = Color.white;
             towerGhost.color = new Color(towerGhost.color.r, towerGhost.color.g, towerGhost.color.b, 1);
         }
         else
         {
             cursorSprite.color = Color.red;
             towerGhost.color = new Color(towerGhost.color.r, towerGhost.color.g, towerGhost.color.b, 0);
+        }
+        if (hasEnoughMoney)
+        {
+            costCounter.color = Color.white;
+        }
+        else
+        {
+            costCounter.color = Color.red;
         }
         if (Input.GetMouseButtonDown(0))
         {
@@ -64,12 +73,9 @@ public class TowerPlacer : MonoBehaviour
             if(gameStatus.towerCosts[towerSelector.index] == 0)
             {
                 //TODO: quick hack
-                gameStatus.towerCosts = new int[] { 1, 1, 1 };
+                gameStatus.towerCosts = new int[] { 5, 5, 5 };
             }
-            else
-            {
-                gameStatus.towerCosts[towerSelector.index] *= 2;
-            }
+            gameStatus.towerCosts[towerSelector.index] *= 2;
             
         }
 	}

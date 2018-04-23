@@ -11,7 +11,7 @@ public class GameStatus : MonoBehaviour {
 
     public int[] towerCosts = new int[] { 0, 0, 0 };
 
-    public GameObject moneyTextObject;
+    public GameObject moneyTextObject = null;
 
     private SongData songData;
     private Text moneyText;

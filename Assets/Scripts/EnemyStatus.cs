@@ -33,6 +33,10 @@ public class EnemyStatus : MonoBehaviour {
             health -= snareCollision.damage;
             Destroy(snareCollision.gameObject);
         }
+        if (collision.gameObject.tag == "Tower")
+        {
+            Destroy(collision.gameObject);
+        }
     }
 
     void Update()
