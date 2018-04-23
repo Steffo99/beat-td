@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\LargeEnemyMovement.cs" />
     <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
     <Compile Include="Assets\Scripts\PositionFromMouse.cs" />
+    <Compile Include="Assets\Scripts\SnareCollision.cs" />
     <Compile Include="Assets\Scripts\SnareTower.cs" />
     <Compile Include="Assets\Scripts\SongData.cs" />
     <Compile Include="Assets\Scripts\SpriteOnLives.cs" />

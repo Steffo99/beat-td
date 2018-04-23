@@ -5,12 +5,12 @@ using UnityEngine;
 public class TowerSelector : MonoBehaviour {
 
     public GameObject[] towerList;
+    public int index;
 
-    private int index;
     private TowerPlacer towerPlacer;
     private SpriteRenderer towerGhost;
 
-	void Start () {
+    void Start () {
         index = 0;
         towerPlacer = gameObject.GetComponent<TowerPlacer>();
         SpriteRenderer[] spriteRenderers = gameObject.GetComponentsInChildren<SpriteRenderer>();
@@ -25,7 +25,7 @@ public class TowerSelector : MonoBehaviour {
 	}
 	
 	void Update () {
-		if (Input.GetAxis("Mouse ScrollWheel") > 0)
+        if (Input.GetAxis("Mouse ScrollWheel") > 0)
         {
             //Go to the next tower
             index++;

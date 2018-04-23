@@ -456,7 +456,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d881bbfc851b179449e8de4ef83de168, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -555,6 +555,7 @@ MonoBehaviour:
   - {fileID: 1353675573854854, guid: 8436f60a30d755346a1829fc1154f0a2, type: 2}
   - {fileID: 1116464442260662, guid: 68f4cf9ed4f721340aec1ee79ef4c967, type: 2}
   - {fileID: 1790912687524718, guid: f84d521163ebde447879f581a32ca118, type: 2}
+  index: 0
 --- !u!114 &114032699107723242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -579,7 +580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   higherSprite: {fileID: 21300000, guid: 7ba187ba05264f64798e5ccc5a527de6, type: 3}
   lowerSprite: {fileID: 21300000, guid: baadb80603ed5304eb85af6edc502571, type: 3}
-  livesThreshold: 6
+  livesThreshold: 5
 --- !u!114 &114135218223358326
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -593,7 +594,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   higherSprite: {fileID: 21300000, guid: 7ba187ba05264f64798e5ccc5a527de6, type: 3}
   lowerSprite: {fileID: 21300000, guid: baadb80603ed5304eb85af6edc502571, type: 3}
-  livesThreshold: 3
+  livesThreshold: 8
 --- !u!114 &114153136693258118
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -621,7 +622,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   higherSprite: {fileID: 21300000, guid: 7ba187ba05264f64798e5ccc5a527de6, type: 3}
   lowerSprite: {fileID: 21300000, guid: baadb80603ed5304eb85af6edc502571, type: 3}
-  livesThreshold: 7
+  livesThreshold: 4
 --- !u!114 &114200885624498918
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -635,7 +636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   higherSprite: {fileID: 21300000, guid: 7ba187ba05264f64798e5ccc5a527de6, type: 3}
   lowerSprite: {fileID: 21300000, guid: baadb80603ed5304eb85af6edc502571, type: 3}
-  livesThreshold: 10
+  livesThreshold: 1
 --- !u!114 &114264903686440274
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -649,7 +650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   higherSprite: {fileID: 21300000, guid: 7ba187ba05264f64798e5ccc5a527de6, type: 3}
   lowerSprite: {fileID: 21300000, guid: baadb80603ed5304eb85af6edc502571, type: 3}
-  livesThreshold: 1
+  livesThreshold: 10
 --- !u!114 &114321963035045996
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -663,8 +664,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   money: 0
   lives: 10
+  towerCosts: 000000000000000000000000
   moneyTextObject: {fileID: 0}
-  livesTextObject: {fileID: 0}
 --- !u!114 &114326414913970376
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -678,7 +679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   higherSprite: {fileID: 21300000, guid: 7ba187ba05264f64798e5ccc5a527de6, type: 3}
   lowerSprite: {fileID: 21300000, guid: baadb80603ed5304eb85af6edc502571, type: 3}
-  livesThreshold: 4
+  livesThreshold: 7
 --- !u!114 &114438563625650982
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -692,7 +693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   higherSprite: {fileID: 21300000, guid: 7ba187ba05264f64798e5ccc5a527de6, type: 3}
   lowerSprite: {fileID: 21300000, guid: baadb80603ed5304eb85af6edc502571, type: 3}
-  livesThreshold: 5
+  livesThreshold: 6
 --- !u!114 &114571896683674368
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -718,7 +719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   higherSprite: {fileID: 21300000, guid: 7ba187ba05264f64798e5ccc5a527de6, type: 3}
   lowerSprite: {fileID: 21300000, guid: baadb80603ed5304eb85af6edc502571, type: 3}
-  livesThreshold: 2
+  livesThreshold: 9
 --- !u!114 &114894975149290724
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -743,7 +744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   higherSprite: {fileID: 21300000, guid: 7ba187ba05264f64798e5ccc5a527de6, type: 3}
   lowerSprite: {fileID: 21300000, guid: baadb80603ed5304eb85af6edc502571, type: 3}
-  livesThreshold: 9
+  livesThreshold: 2
 --- !u!114 &114924119225117340
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -757,7 +758,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   higherSprite: {fileID: 21300000, guid: 7ba187ba05264f64798e5ccc5a527de6, type: 3}
   lowerSprite: {fileID: 21300000, guid: baadb80603ed5304eb85af6edc502571, type: 3}
-  livesThreshold: 8
+  livesThreshold: 3
 --- !u!212 &212052167362182582
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -1112,8 +1113,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1577246843
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 44c980550aedaac4793c6e1f95e084bc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

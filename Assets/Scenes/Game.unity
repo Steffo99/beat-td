@@ -413,26 +413,6 @@ Prefab:
       propertyPath: moneyTextObject
       value: 
       objectReference: {fileID: 244445659}
-    - target: {fileID: 114321963035045996, guid: 75e554cdca74b174b8f51d9615688c48,
-        type: 2}
-      propertyPath: livesTextObject
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114153136693258118, guid: 75e554cdca74b174b8f51d9615688c48,
-        type: 2}
-      propertyPath: bpm
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 212503120060765600, guid: 75e554cdca74b174b8f51d9615688c48,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: -1577246843
-      objectReference: {fileID: 0}
-    - target: {fileID: 212503120060765600, guid: 75e554cdca74b174b8f51d9615688c48,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75e554cdca74b174b8f51d9615688c48, type: 2}
   m_IsPrefabAsset: 0

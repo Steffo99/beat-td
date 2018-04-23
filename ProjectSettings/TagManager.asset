@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Tower
   - Hit
+  - Score
   layers:
   - Default
   - TransparentFX

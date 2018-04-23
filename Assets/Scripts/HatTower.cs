@@ -35,7 +35,7 @@ public class HatTower : MonoBehaviour {
         {
             //Calculate the power of the 
             //power = Sqrt(Cos(pi * t))
-            float power = Mathf.Pow(Mathf.Abs(Mathf.Cos(songData.songTime * Mathf.PI * songData.bpm / 30)) * ((cooldown - cooldownRemaining) / cooldown), 2);
+            float power = Mathf.Sqrt(Mathf.Abs(Mathf.Cos(songData.songTime * Mathf.PI * songData.bpm / 30)) * ((cooldown - cooldownRemaining) / cooldown));
             //Play the sound
             hatSource.volume = power;
             hatSource.Play();

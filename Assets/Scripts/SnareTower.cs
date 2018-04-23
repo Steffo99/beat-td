@@ -6,6 +6,9 @@ public class SnareTower : MonoBehaviour {
 
     public Sprite standardSprite;
     public Sprite alternateSprite;
+    public GameObject projectileObject;
+    public float maxRange;
+    public float maxDamage;
 
     private AudioSource snareSource;
     private SongData songData;
@@ -38,6 +41,12 @@ public class SnareTower : MonoBehaviour {
             //Play the sound
             snareSource.volume = power;
             snareSource.Play();
+            //Instantiate the projectile
+            GameObject projectile = Instantiate(projectileObject, transform.position, transform.rotation);
+            SnareCollision sc = projectile.GetComponent<SnareCollision>();
+            sc.maxRange = power * maxRange;
+            sc.damage = Mathf.CeilToInt(power * maxDamage);
+            projectile.transform.localScale = new Vector3(power, power, 1);
             //Start the cooldown
             cooldownRemaining = cooldown;
             //Change the sprite

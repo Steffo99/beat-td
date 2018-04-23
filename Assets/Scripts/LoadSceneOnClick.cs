@@ -7,9 +7,6 @@ public class LoadSceneOnClick : MonoBehaviour {
 
 	public void Play () {
         SceneManager.LoadScene("Game");
-        Scene menu = SceneManager.GetSceneByName("Menu");
-        Scene game = SceneManager.GetSceneByName("Game");
-        SceneManager.SetActiveScene(game);
-        SceneManager.UnloadSceneAsync(menu);
+        Time.timeScale = 1;
 	}
 }
