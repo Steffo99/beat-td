@@ -23,7 +23,7 @@ public class LargeEnemyMovement : MonoBehaviour {
     }
 	
 	void Update () {
-        Vector3 newPosition = Vector3.MoveTowards(transform.position, path[nextStop], speed * Mathf.Pow(Mathf.Sin(songData.songTime * Mathf.PI * songData.bpm / 240), 2) * Time.deltaTime);
+        Vector3 newPosition = Vector3.MoveTowards(transform.position, path[nextStop], speed * Mathf.Pow(Mathf.Cos(songData.songTime * Mathf.PI * songData.bpm / 240), 2) * Time.deltaTime);
         Vector3 difference = newPosition - transform.position;
         if (difference.y > 0)
         {

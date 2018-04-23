@@ -17,7 +17,7 @@ public class EnemyMovement : MonoBehaviour {
     }
 	
 	void Update () {
-        Vector3 newPosition = Vector3.MoveTowards(transform.position, path[nextStop], speed * Mathf.Pow(Mathf.Sin(songData.songTime * Mathf.PI * songData.bpm / 60), 10) * Time.deltaTime);
+        Vector3 newPosition = Vector3.MoveTowards(transform.position, path[nextStop], speed * Mathf.Pow(Mathf.Cos(songData.songTime * Mathf.PI * songData.bpm / 60), 10) * Time.deltaTime);
         if ((newPosition - transform.position).x < 0)
         {
             transform.localScale = new Vector3(-1, 1, 1);
