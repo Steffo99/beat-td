@@ -10,7 +10,7 @@ A Rhythm-based tower defense game!
 ![](https://img.shields.io/badge/theme-4.0-green) 
 ![](https://img.shields.io/badge/graphics-4.1-green)
 ![](https://img.shields.io/badge/humor-2.6-yellow)
-![](https://img.shields.io/badge/mood-3.4-yellowgreen)](https://ldjam.com/events/ludum-dare/45/gravity-fusion)
+![](https://img.shields.io/badge/mood-3.4-yellowgreen)](https://ldjam.com/events/ludum-dare/41/beat-td)
 
 ## About
 
