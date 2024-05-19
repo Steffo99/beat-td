@@ -2,7 +2,7 @@
 
 ![](.media/icon-128x128_round.png)
 
-# beat-td
+# Beat TD
 
 A Rhythm-based tower defense game!
 
